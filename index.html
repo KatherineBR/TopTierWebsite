@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>click</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <header>
+    <h1>click to your heart's content</h1>
+  </header>
+  <body>
+    <script src="script.js"></script>
+    <div class = "img">
+        <script>
+            var x;
+            var bool = true;
+
+            function increase(){
+              x = document.getElementById("button");
+              if (x.width < 1400 && bool){
+                x.width = x.width + 10;
+                x.height = x.height + 10;
+              } else {
+                bool = false;
+                x.width = x.width - 1;
+                x.height = x.height - 1;
+                if (x.width < 400){
+                  bool = true;
+                }
+              }
+            }
+
+        </script>
+        <img id="button" onclick="increase()" src="purblebutton.jpg" alt="purble button image" width="400" height="400"> 
+    </div>
+  </body>
+</html>
